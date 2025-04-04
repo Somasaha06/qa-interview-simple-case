@@ -3,7 +3,6 @@ import { existingUsers } from '../../test-setup/localstorage.setup'
 
 export async function logIn(page: Page, email: string, password: string) {
   await page.goto('http://localhost:8080/login');
-  //const existingUser = existingUsers[0]
   await page
       .locator('#root form div:nth-child(1) > div > input')
       .pressSequentially(email)
